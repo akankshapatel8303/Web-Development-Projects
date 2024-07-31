@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="h">Welcome to Calculate me!</h1>
+    <div class="container">
+    <div class="header">
+        <input class="input" type="text" />
+        <div class="box">
+            <button class = "button" id="btn2">AC</button>
+            <button class = "button" id="btn">R2</button>
+            <button class = "button" id="btn">R0</button>
+            <button class = "button" id="btn">%</button>
+        </div>
+        <div class="box">
+            <button class = "button">7</button>
+            <button class = "button">8</button>
+            <button class = "button">9</button>
+            <button class = "button" id="btn">*</button>
+        </div>
+        <div class="box">
+            <button class = "button">4</button>
+            <button class = "button">5</button>
+            <button class = "button">6</button>
+            <button class = "button" id="btn">-</button>
+        </div>
+        <div class="box">
+            <button class = "button">1</button>
+            <button class = "button">2</button>
+            <button class = "button">3</button>
+            <button class = "button" id="btn">+</button>
+        </div>
+        <div class="box">
+            <button class = "button">0</button>
+            <button class = "button" id="btn">.</button>
+            <button class = "button" id="btn">/</button>
+            <button class = "button" id="btn1">=</button>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    var string = "";
+    var buttons = document.querySelectorAll('.button');
+    Array.from(buttons).forEach((button)=>{
+        button.addEventListener('click', (e)=>{
+            if(e.target.innerHTML == '='){
+                string = eval(string);
+                document.querySelector('input').value = string;
+            }
+            else if(e.target.innerHTML == 'AC'){
+                string = "";
+                document.querySelector('input').value = string;
+                // document.getElementById('btn2').innerHTML = 'CA';
+            }
+            else{
+                console.log(e.target);
+                string = string + e.target.innerHTML;
+                document.querySelector('input').value = string;
+            }
+        })
+    })
+</script>
+</html>

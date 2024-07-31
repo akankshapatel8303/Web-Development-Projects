@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .login1{
+        margin: 30px 20px;
+    }
+   .login1{
+        display: flex;
+        justify-content: center;
+        align-items: normal;
+    }
+   .login1 .login2{
+        margin: 10px 0px;
+        width: 40vw;
+        margin-right: 100px;
+        margin-bottom: 0px;
+    }
+    .login1 .login4{
+       margin-left: 70px;
+    }
+   .login1 .login2 h1{
+        margin: 20px 0px;
+        font-size: 2.7rem;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .login1 .login2 h1 span{
+        color: blue;
+    }
+    .login1 .login2 h3{
+        background-color: rgb(245, 224, 224);
+        height: 4vh;
+    }
+   .login2 input{
+        width: 30vw;
+        border: 1px solid rgb(113, 112, 112);
+        padding: 15px 10px;
+        border-radius: 10px;
+        font-size: 1.2rem;
+    }
+    .login2 .i1{
+        margin-bottom: 30px;
+    } 
+    .login2 .i2{
+        margin-bottom: 0px;
+    }
+    .login2 img{
+        margin:40px 0px ;
+    }
+    .login1 .login4 p{
+        font-size: 1.2rem;
+        margin: 30px 0px;
+    }
+    .login1 .login4 h4{
+        font-size: 0.8rem;
+        margin-top: 2px;
+        margin-bottom: 30px;
+        color: rgb(82, 81, 81);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .login1 .login4 p a{
+        text-decoration: none;
+        color: rgb(10, 98, 158);
+    }
+    .login1 .login4 label{
+        font-size: 1rem;
+    }
+    .login1 .login4 .f{
+        text-decoration: none;
+       display: flex;
+       justify-content: center;
+       align-items: end;
+       margin-left: 200px;
+       color: rgb(9, 92, 148);
+    }
+    .login4 button{
+        font-size: 1.2rem;
+        padding: 0px 25px;
+        background-color: rgb(6, 115, 151);
+        color: white;
+        border-color: rgb(9, 114, 183);
+        margin: 15px 0px;
+        border-radius: 7px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 7vh;
+    }
+    .login4 button:hover{
+        margin: 12px 0px;
+    }
+    .login4 button img{
+        color: white;
+    }
+    .login3 {
+        margin-top: 100px ;
+        margin-bottom: 0px;
+    }
+    .login1{
+        margin-top: 15px;
+        margin-bottom: 0px;
+    }
+    .course{
+        display: flex;
+        margin: 7px 0px;
+        /* margin-top: 7px; */
+    }
+    .course input{
+        margin: 0px 0px;
+    }
+    .course label{
+        margin: 0px 0px;
+        font-size: 1.3rem;
+    }
+    .login2 .je{
+        font-size: 1rem;
+    }
+    @media screen and (min-width: 768px) and (max-width: 991px){
+            .login3 img{
+                display: none;
+            }
+            .login1 .login2{
+            width: 100vw;
+            margin-right: 10px;
+            margin-bottom: 0px;
+        }
+        .login1 .login4 .f{
+           margin-left: 0px;
+        }
+        }
+        @media screen and (min-width: 992px) and (max-width: 1023px){
+            .login3 img{
+                width: 30vw;
+            }
+            .login1 .login4{
+           margin-left: 0px;
+        }
+        .login1 .login4 .f{
+           margin-left: 0px;
+        }
+        .login1 .login2{
+            margin-right: 0px;
+        }
+        .login1{
+            margin: 40px 0px;
+            margin-left: -230px;
+        }
+        .login3 {
+            margin-top: 180px ;
+        }
+        .login2 .l{
+            width: 30vw;
+        }
+        }
+        @media screen and (min-width: 1024px) and (max-width: 1200px){
+            .login3 img{
+                width: 30vw;
+            }
+            .login1 .login4{
+           margin-left: 0px;
+        }
+        .login1 .login4 .f{
+           margin-left: 0px;
+        }
+        .login1 .login2{
+            margin-right: 0px;
+        }
+        .login1{
+            margin: 40px 0px;
+            margin-left: -250px;
+        }
+        .login3 {
+            margin-top: 180px ;
+        }
+        .login2 .l{
+            width: 30vw;
+        }
+        }
+        </style>
+</head>
+<body>
+    <div class="login1">
+    <div class="login2">
+        <img src="https://www.acadza.com/assets/icons/acadzalogo.svg" alt="">
+        <div class="login4">
+            <h3>Get FREE access to Acadza Dost for 4 hours on Signup</h3>
+        <h1>Become a part
+            of <span>Acadza</span></h1>
+        <p>Already have an account? <a href="/login.html">Login</a></p>
+        <form action="">
+            <label for="je" class="je">Select Course</label>
+            <br>
+            <div class="course">
+            <label for="jee" id="m">JEE</label>
+                    <input type="radio" name="course" id="jee">
+                    <label for="neet" id="q">NEET</label>
+                    <input type="radio" name="course" id="neet">
+                    <label for="board" id="q">BOARD</label>
+                    <input type="radio" name="course" id="board">
+                </div>
+            <br>
+            <label for="num">Mobile Number</label>
+            <br>
+            <input class="i2" type="number" name="number" id="num" placeholder="Enter the phone number">
+            <br>
+           <h4 class=".v">Verify Your Number To Create Your Account</h4>
+        </form>
+        <form action="/index.html">
+            <button>Start Now <img src="https://www.acadza.com/assets/icons/rightarrow.svg" alt=""></button>
+        </form>
+        <p class="c">Arihant readers with scratch code <a href="/click.html">Click here </a></p>
+    </div>
+    </div>
+    <div class="login3">
+        <img src="https://www.acadza.com/assets/login_signup/boywithmobile.svg" alt="">
+    </div>
+</div>
+    
+</body>
+</html>

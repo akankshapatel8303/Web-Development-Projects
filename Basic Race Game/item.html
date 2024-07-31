@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="item.css">
+</head>
+<body>
+    <div id="game">
+        <div id="bluecar"><img src="blue.png" alt=""></div>
+        <div id="racecar"><img src="race.png" alt=""></div>
+    </div>
+    <div id="result">
+        <h1>Game Over</h1>
+        <p id="score"></p>
+        <button id="btn" onclick="location.reload()">Restart</button>
+    </div>
+    <audio id="sound" src="sound.mp3"></audio>
+</body>
+<script>
+    var game = document.getElementById("game");
+    var bluecar = document.getElementById("bluecar");
+    var result = document.getElementById("result");
+    const score = document.getElementById("score");
+    var game = document.getElementById("game");
+    var sound = document.getElementById("sound");
+    var counter = 0;
+
+    //bluecar move
+    bluecar.addEventListener("animationiteration", function(){
+        var random = ((Math.floor(Math.random() * 3))*181)
+        bluecar.style.left = random +"px";
+        counter++
+    })
+    //racecar move
+    window.addEventListener("keydown", function(e){
+        if(e.keyCode == "39"){
+            var raceCarLeft = parseInt(window.getComputedStyle(racecar).getPropertyValue("left"))
+        if(raceCarLeft<362){
+         racecar.style.left = (raceCarLeft + 181) + "px"     
+            }
+            sound.play();  
+        };
+            if(e.keyCode == "37"){
+            var raceCarLeft = parseInt(window.getComputedStyle(racecar).getPropertyValue("left"))
+        if(raceCarLeft>0){
+         racecar.style.left = (raceCarLeft - 181) + "px"       
+            }
+            sound.play();  
+        };
+    })
+
+    //Game Over
+   setInterval( function gameover(){
+        var bluecarTop = parseInt(window.getComputedStyle(bluecar).getPropertyValue("top"));
+        var bluecarLeft = parseInt(window.getComputedStyle(bluecar).getPropertyValue("left"));
+        var raceCarLeft = parseInt(window.getComputedStyle(racecar).getPropertyValue("left"));
+        if((bluecarLeft === raceCarLeft) && (bluecarTop > 200) && (bluecarTop < 390)){
+            result.style.display = "block";
+            game.style.display = "none";
+            score.innerHTML = `score: ${counter}`;
+            counter = 0;
+        }
+    }, 10)
+</script>
+</html>
